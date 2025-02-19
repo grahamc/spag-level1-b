@@ -19,7 +19,7 @@ jobs:
             )
             && github.head_ref == ''
             && github.base_ref == ''
-            && github.event.repository.owner.name == 'DeterminateSystems'
-            && github.repository_owner == 'DeterminateSystems'
+            && github.event.repository.owner.name == 'grahamc'
+            && github.repository_owner == 'grahamc'
             && github.ref_type == 'tag'
           )
