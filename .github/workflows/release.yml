@@ -10,6 +10,9 @@ jobs:
   hi:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "$HI"
+        env:
+          HI: ${{ toJson(github) }}
       - run: "true"
         if: |
           ((
@@ -19,7 +22,7 @@ jobs:
             )
             && github.head_ref == ''
             && github.base_ref == ''
-            && github.event.repository.owner.name == 'grahamc'
-            && github.repository_owner == 'grahamc'
             && github.ref_type == 'tag'
+            && github.repository_owner == 'grahamc'
+            && github.event.repository.owner.name == 'grahamc'
           )
