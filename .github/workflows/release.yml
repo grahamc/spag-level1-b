@@ -10,7 +10,7 @@ jobs:
   hi:
     runs-on: ubuntu-latest
     steps:
-      - run: true
+      - run: "true"
         if: |
           ((
               github.event_name == 'push'
